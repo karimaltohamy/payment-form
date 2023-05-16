@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- start form payment -->
+    <div class="form_payment">
+      <div class="line">
+        <div class="form_inputs">
+          <form action="">
+            <div class="logo">
+              <span></span>
+            </div>
+            <h3 class="title">وسائل الدفع</h3>
+
+            <div class="input_item input_number">
+              <label for="">رقم الهاتف المسجل لدينا</label>
+              <input type="number" placeholder="01xxxxxxx" />
+            </div>
+
+            <div class="input_item input_user">
+              <label for="">المستخدم</label>
+              <select name="" id="select_user">
+                <option value="" disabled selected>اختر مستخدم</option>
+                <option value="">Emad hashem</option>
+                <option value="">Emad hashem</option>
+              </select>
+            </div>
+
+            <div class="more_details">
+              <div class="inputs_radios_type">
+                <div class="input_radio_type" data-type="renewal">
+                  <label for="renewal">تجديد الباقة</label>
+                  <input type="radio" id="renewal" name="type-payment" />
+                </div>
+
+                <div class="input_radio_type" data-type="deposit">
+                  <label for="deposit">إيداع مبلغ اخر</label>
+                  <input type="radio" id="deposit" name="type-payment" />
+                </div>
+              </div>
+
+              <div class="input_item input_charge">
+                <label for="">مبلغ الشحن</label>
+                <input type="number" placeholder="$..." />
+              </div>
+
+              <div class="inputs_radios_method">
+                <div class="input_radio_method" data-method="visa">
+                  <label for="visa">فيزا / فوري</label>
+                  <input type="radio" id="visa" name="method-payment" />
+                </div>
+
+                <div class="input_radio_method" data-method="cash">
+                  <label for="cash">فودافون كاش</label>
+                  <input type="radio" id="cash" name="method-payment" />
+                </div>
+              </div>
+
+              <div class="input_item input_cash">
+                <label for="">رقم محفظة فودافون كاش</label>
+                <input type="number" placeholder="01xxxxxxx" />
+              </div>
+            </div>
+
+            <button class="btn_pay">ادفع</button>
+            <button class="btn_check">تحقق</button>
+          </form>
+        </div>
+        <div class="form_img">
+          <img src="images/img-payment.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- end form payment -->
+
+    <script src="form.js"></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #ecf1ff;
+}
+
+.form_payment {
+  max-width: 900px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+.form_payment .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form_payment .line .form_inputs,
+.form_payment .line .form_img {
+  width: 50%;
+}
+.form_payment .line .form_inputs {
+  padding: 30px;
+}
+.form_payment .line .form_inputs form .title {
+  text-align: center;
+  font-size: 35px;
+  font-family: 600;
+  margin-bottom: 50px;
+}
+.form_payment .line .form_inputs form .input_item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.form_payment .line .form_inputs form .input_item label {
+  display: block;
+  color: rgb(109, 109, 109);
+  font-weight: 600;
+}
+.form_payment .line .form_inputs form .input_item input,
+.form_payment .line .form_inputs form .input_item select {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(212, 212, 212);
+}
+.form_payment .line .form_inputs form .input_user {
+  display: none;
+}
+.form_payment .line .form_inputs form .input_user.active {
+  display: block;
+}
+.form_payment .line .form_inputs form .more_details {
+  display: none;
+}
+.form_payment .line .form_inputs form .more_details.active {
+  display: block;
+}
+.form_payment .line .form_inputs form .more_details .inputs_radios_type,
+.form_payment .line .form_inputs form .more_details .inputs_radios_method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+}
+.form_payment .line .form_inputs form .more_details .inputs_radios_type .input_radio_type,
+.form_payment .line .form_inputs form .more_details .inputs_radios_type .input_radio_method,
+.form_payment .line .form_inputs form .more_details .inputs_radios_method .input_radio_type,
+.form_payment .line .form_inputs form .more_details .inputs_radios_method .input_radio_method {
+  color: rgb(107, 107, 107);
+}
+.form_payment .line .form_inputs form .more_details .input_cash {
+  display: none;
+}
+.form_payment .line .form_inputs form .more_details .input_cash.active {
+  display: block;
+}
+.form_payment .line .form_inputs form .btn_check,
+.form_payment .line .form_inputs form .btn_pay {
+  background-color: #5842bc;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  width: 100%;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.form_payment .line .form_inputs form .btn_check.remove {
+  display: none;
+}
+.form_payment .line .form_inputs form .btn_pay {
+  display: none;
+}
+.form_payment .line .form_inputs form .btn_pay.active {
+  display: block;
+}
+.form_payment .line .form_img {
+  background-color: #5842bc;
+  height: 630px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.form_payment .line .form_img img {
+  width: 80%;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: auto;
+  }
+  .form_payment {
+    margin: 40px 10px;
+  }
+  .form_payment .line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .form_payment .line .form_img,
+.form_payment .line .form_inputs {
+    width: 100%;
+  }
+  .form_payment .line .form_inputs {
+    padding: 15px 15px;
+  }
+  .form_payment .line .form_inputs form .title {
+    font-size: 24px;
+    font-family: 600;
+    margin-bottom: 20px;
+  }
+  .form_payment .line .form_inputs form .input_item:not(:last-child) {
+    margin-bottom: 7px;
+  }
+  .form_payment .line .form_inputs form .input_item label {
+    font-size: 14px;
+  }
+  .form_payment .line .form_inputs form .input_item input,
+.form_payment .line .form_inputs form .input_item select {
+    padding: 5px;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(212, 212, 212);
+  }
+  .form_payment .line .form_inputs form .more_details .inputs_radios_type,
+.form_payment .line .form_inputs form .more_details .inputs_radios_method {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    margin: 5px 0;
+  }
+  .form_payment .line .form_inputs form .more_details .inputs_radios_type label,
+.form_payment .line .form_inputs form .more_details .inputs_radios_method label {
+    font-size: 14px;
+  }
+  .form_payment .line .form_inputs form .btn_check,
+.form_payment .line .form_inputs form .btn_pay {
+    padding: 6px 30px;
+    margin-top: 10px;
+  }
+  .form_payment .line .form_img {
+    padding: 10px;
+    height: auto;
+  }
+  .form_payment .line .form_img img {
+    max-width: 100px;
+  }
+}
