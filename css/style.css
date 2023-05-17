@@ -263,3 +263,13 @@ body {
     width: 60%;
   }
 }
+.copy_right {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: gray;
+  font-size: 15px;
+  direction: ltr;
+}

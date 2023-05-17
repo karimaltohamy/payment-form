@@ -291,3 +291,14 @@ body {
   }
 }
 // end form_payment
+
+// copy_right
+.copy_right {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: gray;
+  font-size: 15px;
+  direction: ltr;
+}
