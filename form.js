@@ -51,6 +51,7 @@ inputsRadioMethod.forEach((radio) => {
   radio.addEventListener("change", () => {
     if (radio.getAttribute("data-method") === "visa") {
       btnPay.classList.add("active");
+      inputCash.classList.remove("active");
     } else if (radio.getAttribute("data-method") === "cash") {
       btnPay.classList.add("active");
       inputCash.classList.add("active");
