@@ -1,5 +1,6 @@
 const inputNumber = document.querySelector(".input_number input");
 const inputUser = document.querySelector(".input_user");
+const inputOneUser = document.querySelector(".input_one_user");
 const selectUser = document.getElementById("select_user");
 const btnCheck = document.querySelector(".btn_check");
 const btnPay = document.querySelector(".btn_pay");
@@ -14,8 +15,15 @@ btnCheck.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (inputNumber.value > 10) {
-    inputUser.classList.add("active");
-    btnCheck.classList.add("remove");
+    if (inputNumber.value === "01007468461") {
+      inputUser.classList.add("active");
+      btnCheck.classList.add("remove");
+    } else if (inputNumber.value === "01007468462") {
+      inputOneUser.classList.add("active");
+      inputOneUser.children[1].value = "emad hashem";
+      btnCheck.classList.add("remove");
+      moreDetailsSection.classList.add("active");
+    }
   }
 });
 
@@ -29,7 +37,11 @@ inputsRadioType.forEach((radio) => {
   radio.addEventListener("change", () => {
     if (radio.getAttribute("data-type") === "renewal") {
       inputCharge.value = 150;
+      inputCharge.setAttribute("disabled", "");
       console.log(true);
+    } else if (radio.getAttribute("data-type") === "deposit") {
+      inputCharge.value = "";
+      inputCharge.removeAttribute("disabled");
     }
   });
 });
