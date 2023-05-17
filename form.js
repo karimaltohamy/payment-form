@@ -15,14 +15,16 @@ btnCheck.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (inputNumber.value > 10) {
-    if (inputNumber.value === "01007468461") {
+    if (inputNumber.value === "01004632317") {
       inputUser.classList.add("active");
       btnCheck.classList.add("remove");
-    } else if (inputNumber.value === "01007468462") {
+    } else if (inputNumber.value === "01553311233") {
       inputOneUser.classList.add("active");
       inputOneUser.children[1].value = "emad hashem";
       btnCheck.classList.add("remove");
       moreDetailsSection.classList.add("active");
+    } else {
+      btnCheck.classList.add("remove");
     }
   }
 });
