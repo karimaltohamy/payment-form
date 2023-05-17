@@ -273,3 +273,9 @@ body {
   font-size: 15px;
   direction: ltr;
 }
+
+@media (max-width: 768px) {
+  .copy_right {
+    font-size: 11px;
+  }
+}
