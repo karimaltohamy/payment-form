@@ -164,17 +164,13 @@ body {
       position: relative;
 
       .logo {
-        span {
-          display: block;
-          width: 130px;
-          height: 60px;
-          border-radius: 5px;
-          background-color: #5842bc;
+        img {
+          width: 200px;
         }
       }
 
       .text {
-        margin-top: 100px;
+        margin-top: 80px;
 
         .title {
           font-size: 40px;
@@ -301,11 +297,17 @@ body {
   color: gray;
   font-size: 15px;
   direction: ltr;
+
+  a {
+    color: #5842bc;
+  }
 }
 
 @media (max-width: 768px) {
   .copy_right {
     font-size: 11px;
+    width: 100%;
+    text-align: center;
   }
 }
 
