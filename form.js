@@ -9,6 +9,7 @@ const inputsRadioType = document.querySelectorAll(".input_radio_type");
 const inputsRadioMethod = document.querySelectorAll(".input_radio_method");
 const inputCharge = document.querySelector(".input_charge input");
 const inputCash = document.querySelector(".input_cash");
+const popupLoading = document.querySelector(".popup_loading");
 
 // check number
 btnCheck.addEventListener("click", (e) => {
@@ -59,4 +60,9 @@ inputsRadioMethod.forEach((radio) => {
       inputCash.classList.add("active");
     }
   });
+});
+
+btnPay.addEventListener("click", (e) => {
+  e.preventDefault();
+  popupLoading.classList.add("active");
 });
