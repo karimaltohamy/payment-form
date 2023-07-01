@@ -189,6 +189,7 @@ body {
         bottom: 0;
         left: 0;
         z-index: -1;
+        display: none;
 
         img {
           width: 100%;
@@ -197,8 +198,54 @@ body {
     }
   }
 
-  .img_circle {
-    display: none;
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+    z-index: -1;
+
+    .line {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: rgb(86 86 86 / 10%);
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 10px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #5842bc;
+        animation: moveLeftBounces-one 15s linear infinite;
+        border-radius: 50px;
+      }
+
+      &:nth-child(1) {
+        margin-left: -25%;
+
+        &::after {
+          animation-delay: 2s;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-left: 25%;
+
+        &::after {
+          animation-delay: 2.5s;
+        }
+      }
+    }
   }
 }
 
@@ -295,21 +342,6 @@ body {
             width: 60%;
           }
         }
-      }
-    }
-
-    .img_circle {
-      position: absolute;
-
-      bottom: 120px;
-      left: 50px;
-
-      display: block;
-      z-index: -1;
-      animation: rotate 10s ease infinite;
-
-      img {
-        width: 260px;
       }
     }
   }
@@ -471,5 +503,19 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes moveLeftBounces-one {
+  0% {
+    top: 0%;
+  }
+
+  50% {
+    top: 100%;
+  }
+
+  100% {
+    top: 0%;
   }
 }
