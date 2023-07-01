@@ -200,6 +200,7 @@ body {
 @media (max-width: 600px) {
   .form_payment {
     margin: 40px 10px;
+    position: unset;
 
     .line {
       flex-direction: column;
@@ -230,11 +231,13 @@ body {
 
             input,
             select {
-              padding: 5px;
+              padding: 8px;
               font-size: 12px;
               outline: none;
               border: none;
-              border-bottom: 1px solid rgb(212, 212, 212);
+              border: 1px solid rgb(212, 212, 212);
+              border-radius: 6px;
+              margin-top: 5px;
             }
           }
 
@@ -262,12 +265,16 @@ body {
       .form_img {
         padding: 10px;
         height: auto;
+        position: unset;
         // display: none;
 
         .logo {
           display: flex;
           align-items: center;
           justify-content: center;
+          position: absolute;
+          top: 25px;
+          left: 10px;
         }
 
         .text {
@@ -276,7 +283,8 @@ body {
 
         .bg_rocket {
           bottom: auto;
-          top: -130px;
+          top: 110px;
+          animation: move-up 6s ease infinite;
 
           img {
             width: 60%;
@@ -411,6 +419,8 @@ body {
     top: 56px;
     left: 12px;
   }
+
+  // animation
   @keyframes lds-roller {
     0% {
       transform: rotate(0deg);
@@ -418,5 +428,19 @@ body {
     100% {
       transform: rotate(360deg);
     }
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
