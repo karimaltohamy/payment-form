@@ -22,7 +22,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: "Poppins", sans-serif;
-  background-color: white;
+  background-color: rgb(15, 8, 25);
+  color: white;
   overflow: hidden;
 }
 
@@ -57,9 +58,10 @@ body {
 }
 .form_payment .line .form_inputs {
   padding: 30px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #3d3c44;
   border-radius: 6px;
-  background-color: white;
+  background-color: rgb(18, 11, 28);
+  color: white;
 }
 .form_payment .line .form_inputs form .title {
   text-align: center;
@@ -176,56 +178,12 @@ body {
   bottom: 0;
   left: 0;
   z-index: -1;
-  display: none;
 }
 .form_payment .line .form_img .bg_rocket img {
   width: 100%;
 }
 .form_payment .lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  margin: auto;
-  width: 90vw;
-  z-index: -1;
-}
-.form_payment .lines .line {
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  background: rgba(86, 86, 86, 0.1);
-  overflow: hidden;
-}
-.form_payment .lines .line::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 10px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #5842bc;
-  -webkit-animation: moveLeftBounces-one 15s linear infinite;
-          animation: moveLeftBounces-one 15s linear infinite;
-  border-radius: 50px;
-}
-.form_payment .lines .line:nth-child(1) {
-  margin-left: -25%;
-}
-.form_payment .lines .line:nth-child(1)::after {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-.form_payment .lines .line:nth-child(3) {
-  margin-left: 25%;
-}
-.form_payment .lines .line:nth-child(3)::after {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  display: none;
 }
 
 @media (max-width: 600px) {
@@ -311,9 +269,57 @@ body {
     top: 110px;
     -webkit-animation: move-up 6s ease infinite;
             animation: move-up 6s ease infinite;
+    display: none;
   }
   .form_payment .line .form_img .bg_rocket img {
     width: 60%;
+  }
+  .form_payment .lines {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+    z-index: -1;
+  }
+  .form_payment .lines .line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  .form_payment .lines .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    -webkit-animation: moveLeftBounces-one 15s linear infinite;
+            animation: moveLeftBounces-one 15s linear infinite;
+    border-radius: 50px;
+  }
+  .form_payment .lines .line:nth-child(1) {
+    margin-left: -25%;
+  }
+  .form_payment .lines .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .form_payment .lines .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  .form_payment .lines .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
   }
 }
 .copy_right {
