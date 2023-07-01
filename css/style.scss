@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -14,9 +18,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: white;
   overflow: hidden;
-  background-image: url("../images/bg1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .shap_img {
@@ -28,6 +29,12 @@ body {
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .shap_img {
+    display: none;
   }
 }
 
@@ -195,6 +202,10 @@ body {
       }
     }
   }
+
+  .img_circle {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -292,6 +303,21 @@ body {
         }
       }
     }
+
+    .img_circle {
+      position: absolute;
+
+      bottom: 120px;
+      left: 50px;
+
+      display: block;
+      z-index: -1;
+      animation: rotate 10s ease infinite;
+
+      img {
+        width: 260px;
+      }
+    }
   }
 }
 // end form_payment
@@ -350,7 +376,7 @@ body {
     height: 80px;
   }
   .lds-roller div {
-    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite forwards;
     transform-origin: 40px 40px;
   }
   .lds-roller div:after {
@@ -442,5 +468,14 @@ body {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   height: 100vh;
   display: -webkit-box;
@@ -20,9 +24,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: white;
   overflow: hidden;
-  background-image: url("../images/bg1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .shap_img {
@@ -36,6 +37,11 @@ body {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .shap_img {
+    display: none;
+  }
+}
 .form_payment {
   max-width: 1200px;
   width: 100%;
@@ -179,6 +185,9 @@ body {
 .form_payment .line .form_img .bg_rocket img {
   width: 100%;
 }
+.form_payment .img_circle {
+  display: none;
+}
 
 @media (max-width: 600px) {
   .form_payment {
@@ -267,6 +276,18 @@ body {
   .form_payment .line .form_img .bg_rocket img {
     width: 60%;
   }
+  .form_payment .img_circle {
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+    display: block;
+    z-index: -1;
+    -webkit-animation: rotate 10s ease infinite;
+            animation: rotate 10s ease infinite;
+  }
+  .form_payment .img_circle img {
+    width: 260px;
+  }
 }
 .copy_right {
   position: absolute;
@@ -328,8 +349,8 @@ body {
   height: 80px;
 }
 .popup_loading .lds-roller div {
-  -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-          animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite forwards;
+          animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite forwards;
   -webkit-transform-origin: 40px 40px;
           transform-origin: 40px 40px;
 }
@@ -455,5 +476,25 @@ body {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
