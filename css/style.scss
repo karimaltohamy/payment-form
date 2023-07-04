@@ -90,6 +90,15 @@ body {
             border: none;
             border-bottom: 2px solid rgb(212, 212, 212);
             background-color: transparent;
+            color: white;
+
+            &::placeholder {
+              color: white;
+            }
+
+            option {
+              color: black;
+            }
           }
         }
 

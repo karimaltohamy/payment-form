@@ -91,6 +91,27 @@ body {
   border: none;
   border-bottom: 2px solid rgb(212, 212, 212);
   background-color: transparent;
+  color: white;
+}
+.form_payment .line .form_inputs form .input_item input::-webkit-input-placeholder, .form_payment .line .form_inputs form .input_item select::-webkit-input-placeholder {
+  color: white;
+}
+.form_payment .line .form_inputs form .input_item input::-moz-placeholder, .form_payment .line .form_inputs form .input_item select::-moz-placeholder {
+  color: white;
+}
+.form_payment .line .form_inputs form .input_item input:-ms-input-placeholder, .form_payment .line .form_inputs form .input_item select:-ms-input-placeholder {
+  color: white;
+}
+.form_payment .line .form_inputs form .input_item input::-ms-input-placeholder, .form_payment .line .form_inputs form .input_item select::-ms-input-placeholder {
+  color: white;
+}
+.form_payment .line .form_inputs form .input_item input::placeholder,
+.form_payment .line .form_inputs form .input_item select::placeholder {
+  color: white;
+}
+.form_payment .line .form_inputs form .input_item input option,
+.form_payment .line .form_inputs form .input_item select option {
+  color: black;
 }
 .form_payment .line .form_inputs form .input_user,
 .form_payment .line .form_inputs form .input_one_user {
